@@ -1634,11 +1634,11 @@ input, select, textarea {
 				background-repeat: no-repeat;
 				background-size:cover;
 				border: 0;
-				height: 60%;
+				height: 80%;
 				left: 0;
 				position: absolute;
 				top: 0;
-				width: 60%;
+				width: 80%;
 			}
 
 			#main .thumb > h2 {

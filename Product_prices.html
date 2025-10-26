@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Price List</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; background-color: azure; }
+    input[type="text"] {
+      width: 300px;
+      padding: 8px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      background-color:rgb(217, 218, 205);
+        }
+    table {
+      width: 100%;
+      border-collapse:separate;
+      border-color: #8e86d1;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background-color: #a8a1e0;
+    }
+    img {
+       display: legacy;
+       position:inherit;
+       margin-top: 0%;
+       margin-left: 1000px;
+       margin-right: auto;
+}  
+  </style>
+</head>
+<body>
+
+<h2>Product Price List as @26 Oct 2025</h2>
+<p>Check <a href="https://za.mannatech.com/products/shop/?account=4590062" target="_blank">Online Shop</a> to view latest Prices</p>
+<a href="index.html">Back to Products</a>
+<img src="Mannatech_logo.jpg" >
+<input type="text" id="searchInput" placeholder="Search by cat, code or description..." onkeyup="filterTable()">
+
+<table id="productTable">
+  <thead>
+    <tr>
+      <th>Category</th>
+      <th>Code</th>
+      <th>Description</th>
+      <th>Normal Retail</th>
+      <th>Enrolled Customer/Associate</th>
+      <th>Points</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>INTEGRATIVE</td><td>37017</td><td>Advanced Ambrotose (120 capsules)</td><td>830.00</td><td>690.00</td><td>42</td></tr>
+    <tr><td>INTEGRATIVE</td><td>33217</td><td>Advanced Ambrotose (120g powder)</td><td>2555.00</td><td>2130.00</td><td>132</td></tr>
+    <tr><td>INTEGRATIVE</td><td>85617</td><td>Ambrotose AO (60 capsules) (4 pack)</td><td>2460.00</td><td>2050.00</td><td>135</td></tr>
+    <tr><td>INTEGRATIVE</td><td>12717</td><td>Ambrotose AO (60 capsules)</td><td>830.00</td><td>690.00</td><td>42</td></tr>
+    <tr><td>INTEGRATIVE</td><td>37117</td><td>Ambrotose Complex (100g powder)</td><td>2,650.00</td><td>2,210.00</td><td>135</td></tr>
+    <tr><td>INTEGRATIVE</td><td>35117</td><td>Ambrotose Complex (60 capsules)</td><td>660.00</td><td>550.00</td><td>34</td></tr>
+    <tr><td>INTEGRATIVE</td><td>12017</td><td>Catalyst (120 capsules)</td><td>850.00</td><td>710.00</td><td>42</td></tr>
+    <tr><td>INTEGRATIVE</td><td>18517</td><td>GlycoCafé™ (30 slimsticks)</td><td>665.00</td><td>555.00</td><td>30</td></tr>
+    <tr><td>INTEGRATIVE</td><td>15617</td><td>Manapol® (30g powder)</td><td>4,660.00</td><td>3,885.00</td><td>230</td></tr>
+    <tr><td>INTEGRATIVE</td><td>13517</td><td>MannaBears™</td><td>535.00</td><td>445.00</td><td>26</td></tr>
+    <tr><td>INTEGRATIVE</td><td>34317</td><td>NutriVerus™ (150g powder)</td><td>1,110.00</td><td>925.00</td><td>60</td></tr>
+    <tr><td>INTEGRATIVE</td><td>11117</td><td>PLUS™ (90 capsules)</td><td>660.00</td><td>550.00</td><td>34</td></tr>
+    <tr><td>TARGETED</td><td>23017</td><td>BounceBack® (60 capsules)</td><td>880.00</td><td>735.00</td><td>44</td></tr>
+    <tr><td>TARGETED</td><td>10417</td><td>CardioBALANCE® (120 capsules)</td><td>830.00</td><td>690.00</td><td>42</td></tr>
+    <tr><td>TARGETED</td><td>18617</td><td>GI-ProBalance® (30 slimsticks)</td><td>625.00</td><td>520.00</td><td>28</td></tr>
+    <tr><td>TARGETED</td><td>12317</td><td>ImmunoSTAT® (60 chewable tablets)</td><td>730.00</td><td>610.00</td><td>37</td></tr>
+    <tr><td>TARGETED</td><td>39117</td><td>Manna-C™ (60 capsules)</td><td>660.00</td><td>550.00</td><td>34</td></tr>
+    <tr><td>TARGETED</td><td>36117</td><td>MannaCLEANSE™ (120 capsules)</td><td>660.00</td><td>550.00</td><td>34</td></tr>
+    <tr><td>TARGETED</td><td>38817</td><td>MicroBiome GI-Zyme® (60 capsules)</td><td>730.00</td><td>610.00</td><td>37</td></tr>
+    <tr><td>TARGETED</td><td>16617</td><td>Omega-3 wiTARGETED Vitamin D3 (60 capsules)</td><td>575.00</td><td>480.00</td><td>28</td></tr>
+    <tr><td>TARGETED</td><td>24017</td><td>Superfood Greens and Reds (192g powder)</td><td>1,085.00</td><td>905.00</td><td>54</td></tr>
+    <tr><td>WFIT</td><td>19417</td><td>EM•PACT® (360g powder)</td><td>665.00</td><td>555.00</td><td>34</td></tr>
+    <tr><td>WFIT</td><td>22117</td><td>OsoLean® (366g protein powder)</td><td>940.00</td><td>785.00</td><td>50</td></tr>
+    <tr><td>WFIT</td><td>16217</td><td>TruPLENISH™ Nutritional Shake (Chocolate)</td><td>1,295.00</td><td>1,080.00</td><td>60</td></tr>
+    <tr><td>WFIT</td><td>16317</td><td>TruPLENISH Nutritional Shake (Vanilla)</td><td>1,295.00</td><td>1,080.00</td><td>60</td></tr>
+    <tr><td>SKIN</td><td>17101</td><td>Emprizone® Hydrating Gel</td><td>R680.00</td><td>R565.00</td><td>25</td>
+    <tr><td>SKIN</td><td>13101</td><td>FIRM with Ambrotose® Crème</td><td>R680.00</td><td>R565.00</td><td>25</td>
+    <tr><td>SKIN</td><td>25817</td><td>LUMINOVATION Purifying Deep Cleanser</td><td>R570.00</td><td>R475.00</td><td>25</td>
+    <tr><td>SKIN</td><td>27217</td><td>LUMINOVATION Luminous Essence Lotion</td><td>R1,200.00</td><td>R1,000.00</td><td>49</td>
+    <tr><td>SKIN</td><td>27117</td><td>LUMINOVATION™ First Essential Toner</td><td>R1,130.00</td><td>R940.00</td><td>46</td>
+    <tr><td>SKIN</td><td>27317</td><td>LUMINOVATION Youth Intensive Cream</td><td>R1,325.00</td><td>R1,105.00</td><td>60</td>
+		<tr><td>SKIN</td><td>27817</td><td>LUMINOVATION K Beauty System Bundle</td><td>R4,600.00</td><td>R3,145.00</td><td>175</td></tr>
+		<tr><td>BUNDLE</td><td>51817</td><td>Advanced Ambrotose Buy 2 get 20% off</td><td>R4,100.00</td><td>R3,415.00</td><td>169</td></tr>
+    <tr><td>BUNDLE</td><td>62017</td><td>Advanced Ambrotose & Optimum Support Value Bundle: Advanced Ambrotose (120g), 1 Ambrotose AO, 2 PLUS, 1 Catalyst</td><td>R3,438.00</td><td>R2,865.00</td><td>141</td></tr>
+    <tr><td>BUNDLE</td><td>62117</td><td>Ambrotose Complex & Optimum Support Value Bundle: Advanced Complex (100g), 1 Ambrotose AO, 2 PLUS, 1 Catalyst</td><td>R3,438.00</td><td>R2,865.00</td><td>141</td></tr>
+    <tr><td>BUNDLE</td><td>61317</td><td>Ambrotose Holistic Health Value Bundle: 1 Ambrotose Complex (100g) (item 37101) OR 1 Advanced Ambrotose (120g)(item 33201) + 1 PLUS, 1 Omega-3 with Vitamin D3, 1 GI-ProBalance, 1 CardioBALANCE, 1 ImmunoSTART, and 1 NutriVerus</td><td>R6,490.00</td><td>R5,410.00</td><td>295</td></tr>
+    <tr><td>BUNDLE</td><td>60617</td><td>Basic Body Composition Value Bundle: 2 TruPLENISH Shakes and 1 GI-ProBalance</td><td>R2,905.00</td><td>R2,420.00</td><td>120</td></tr>
+    <tr><td>BUNDLE</td><td>57517</td><td>Catalyst and Ambrotose Value Bundle: 1 Ambrotose AO, 1 PLUS, 1 Catalyst, 1 Omega-3 w/Vitamin D3, 1 GI-ProBalance, 1 Choice of Ambrotose Complex or Advanced Ambrotose</td><td>R3,690.00</td><td>R3,075.00</td><td>169</td></tr>
+    <tr><td>BUNDLE</td><td>57417</td><td>Catalyst Value Bundle: 1 Ambrotose AO, 1 PLUS, 1 Catalyst, 1 Omega-3 w/ Vitamin D3, 1 GI-ProBalance</td><td>R2,630.00</td><td>R2,190.00</td><td>	135	</td></tr>
+    <tr><td>BUNDLE</td><td>57917</td><td>Gut Health Bundle: 1 GI-Zyme, 1 GI-ProBalance, 1 ImmunoSTART, 1 MannaCLEANSE</td><td>R2,480.00</td><td>R2,065.00</td><td>136</td></tr>
+    <tr><td>BUNDLE</td><td>74517</td><td>NutriVerus 2 Pack Value Bundle: 2 NutriVerus</td><td>R1,780.00</td><td>R1,485.00</td><td>120</td></tr>
+    <tr><td>BUNDLE</td><td>63617</td><td>Nutriverus & Advanced Ambrotose Bundle: 1 Omega-3 with Vitamin D3, 1 NutriVerus, 1 Advanced Ambrotose (120g), 1 PLUS</td><td>R3,925.00</td><td>R3,270.00</td><td>	176	</td></tr>
+    <tr><td>BUNDLE</td><td>63517</td><td>NutriVerus & Ambrotose Complex Bundle: 1 Omega-3 with Vitamin D3, 1 NutriVerus, 1 Ambrotose Complex (100g), 1 PLUS</td><td>R3,925.00</td><td>R3,270.00</td><td>	176	</td></tr>
+    <tr><td>BUNDLE</td><td>61917</td><td>Optimum Support Value Bundle: 1 Ambrotose AO, 2 PLUS, 1 Catalyst</td><td>R2,280.00</td><td>R1,900.00</td><td>113</td></tr>
+    <tr><td>BUNDLE</td><td>90817</td><td>Sports Kit: 2 EM•PACT, 1 CardioBALANCE, 1 BounceBack, 1 Omega-3 with Vitamin D3, 1 Elite Performance Kit</td><td>	R3,160.00</td><td>R2,635.00</td><td>131</td></tr>
+    <tr><td>BUNDLE</td><td>60717</td><td>SuperFood B2G1</td><td>R2,200.00</td><td>R1,810.00</td><td>131</td></tr>
+    <tr><td>BUNDLE</td><td>57717</td><td>Total Health with Advanced Ambrotose Value Bundle: 1 Advanced Ambrotose 120g, 1 Ambrotose AO, 1 PLUS, 1 Catalyst, 1 Omega 3 with Vitamin D3, 1 GI-ProBalance or 1 GI Zyme</td><td>R4,020.00</td><td>R3,350.00</td><td>169</td></tr>
+    <tr><td>BUNDLE</td><td>57617</td><td>Total Health with Ambrotose Complex: 1 Ambrotose Complex (100g),1 Ambrotose AO, 1 Plus, 1 Catalyst, 1 Omega 3 with Vitamin D3, 1 GI-ProBalance OR 1 GI-Zyme</td><td>R4,020.00</td><td>R3,350.00</td><td>169</td></tr>
+    <tr><td>BUNDLE</td><td>57817</td><td>Total Health Value Bundle: 1 Ambrotose AO, 1 Plus, 1 Catalyst, Omega-3 with Vitamin D3, 1 GI-ProBalance or 1 GI-Zyme</td><td>R2,860.00</td><td>R2,385.00</td><td>135</td></tr>
+
+<script>
+        function filterTable() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const rows = document.querySelectorAll("#productTable tbody tr");
+    rows.forEach(row => {
+    const code = row.cells[1].textContent.toLowerCase();
+    const description = row.cells[2].textContent.toLowerCase();
+    const cat = row.cells[0].textContent.toLowerCase();
+    row.style.display = code.includes(input) || description.includes(input) || cat.includes(input)? "" : "none";
+  });
+}
+    </script>
+    </html>

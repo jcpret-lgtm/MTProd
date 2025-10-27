@@ -148,6 +148,7 @@ input, select, textarea {
 		html, body {
 			min-width: 320px;
 		}
+		img {margin-left:20px;}
 
 	html {
 		box-sizing: border-box;

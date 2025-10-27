@@ -148,10 +148,6 @@ input, select, textarea {
 		html, body {
 			min-width: 320px;
 		}
-    .rotate-image {
-            transform: rotate(90deg);
-              }
-	}
 
 	html {
 		box-sizing: border-box;

@@ -146,7 +146,7 @@ input, select, textarea {
 	@media screen and (max-width: 480px) {
 
 		html, body {
-			min-width: fit-content;
+			min-width: 480px;
 			}
 
 	html {

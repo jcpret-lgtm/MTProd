@@ -145,10 +145,9 @@ input, select, textarea {
 
 	@media screen and (max-width: 480px) {
 
-		html, body {
+		html, body { width: device-width;
 			min-width: 320px;
-			transform: rotate(90deg);
-		}
+			}
 
 	html {
 		box-sizing: border-box;

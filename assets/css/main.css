@@ -147,7 +147,7 @@ input, select, textarea {
 
 		html, body {
 			min-width: 320px;
-			display-mode: fullscreen;
+			transform: rotate(90deg);
 		}
 
 	html {

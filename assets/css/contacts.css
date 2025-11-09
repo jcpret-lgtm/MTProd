@@ -3,4 +3,17 @@
 .w3-center{text-align:center!important}
 .w3-padding-32{padding-top:32px!important;padding-bottom:32px!important}
 .w3-padding-large{padding:12px 24px!important}
+
 .w3-text-lime, a, .w3-hover-text-lime:hover{color:#cddc39!important}
+ /* Responsive Adjustments */
+        @media (max-width: 768px) {
+           .w3-content, .contact {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .w3-content, .contact {
+                flex: 1 1 100%;
+            }
+        }

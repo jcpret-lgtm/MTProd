@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title><br>
+    </head> 
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: rgb(155, 196, 182);
+            background-image: url("aloe_field.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background-blend-mode: overlay;
+        }
+        h1  {text-align: start;   
+            }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            background-color: rgb(31, 199, 129);
+        }
+        th, td {
+            border: 1px solid #241d42;
+            padding: 8px;
+            text-align: left;
+            font-size: medium;
+        }
+        th {
+            background-color: rgb(31, 126, 118);
+            color: #f8f4f4;
+        }
+        tfoot {font-weight: bold;
+        }
+
+        input[type="text"], input[type="number"], input[type="date"] {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+            color: rgb(10, 10, 122);
+            border-radius: 6%;
+            border-style: double;
+        }
+        input[type="checkbox"] {
+         width: 60%;
+                  }
+        img {
+       display: legacy;
+       position: static;
+       margin-top: 0%;
+       margin-left: 1000px;
+       margin-right: auto;
+}  
+       button { border: 2px solid #555555;
+        border-radius: 8px;
+        background-color: rgb(199, 202, 24);
+      color: rgb(15, 7, 6);
+      padding: none;
+      text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 2px 2px;
+  cursor: pointer;} 
+  p {text-align: right;
+    color: black;
+    font-weight: bold;}  
+      
+    </style>
+
+<body>
+<section>
+<h1>Mannatech Order Form</h1><img src="https://jcpret-lgtm.github.io/MTProd/Mannatech_logo.jpg" alt="logo">
+    <p><a href="https://jcpret-lgtm.github.io/MTProd/Product_prices.html" style="text-align: center; margin-right: 20px;">Lookup Price or Product</a></p>
+    <p id="filenameDisplay"></p>
+    <button onclick="generateFilename()">Generate Filename</button>
+    <button onclick="downloadFile()" id="downloadButton" style="display:none;">Download File</button>
+    </section>        
+<form id="orderForm">
+        <h2>Account Information</h2>
+        <button type="reset" value="Reset">Clear Form</button>
+            <table id="accountdetails">
+        <tr>
+            <th>Account No.</th>
+            <td><input type="text" name="account_no" value="4590062" minlength="7" maxlength="7" placeholder="required" required></td>
+        </tr>
+        <tr>
+            <th>First Name</th>
+            <td><input type="text" id="fname" name="firstname" placeholder="required" required></td>
+        </tr>
+        <tr>
+            <th>Surname</th>
+            <td><input type="text" id="sname" name="surname" placeholder="required" required></td>
+        </tr>
+        <tr>
+            <th>ID No.</th>
+            <td><input type="text" name="id_no" maxlength="13" size="13" placeholder="required - max 13 digits" required></td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><input type="text" name="email" placeholder="required" required></td>
+        </tr>
+        <tr>
+            <th>Shipping Address</th>
+            <td><input type="text" name="shipping_address" placeholder="required" required></td>
+        </tr>
+        <tr>
+            <th>Telephone</th>
+            <td><input type="text" name="telephone" placeholder="required" required></td>
+        </tr>
+        <tr>
+            <th>VAT No.</th>
+            <td><input type="text" name="vat_no" placeholder="optional"> </td>
+        </tr>
+    </table>
+
+    <h2>Card Details</h2>
+    <table id="cardDetails">
+        <tr>
+            <th>Card Type</th>
+            <td><input type="radio" id="visa" name="card_type" value="Visa"><label for="visa">VISA</label>
+        <input type="radio" id="master" name="card_type" value="Mastercard"><label for="visa">Mastercard</label>
+        <input type="radio" id="other" name="card_type" value="Other"><label for="visa">Other</label></td>
+        </tr>
+        <tr>
+            <th>Card Number</th>
+            <td><input type="text" name="card_number" placeholder="required" required></td>
+        </tr>
+        <tr>
+            <th>Card Expiry Date</th>
+            <td><input type="date" name="expiry_date" placeholder="required" required></td>
+        </tr>
+        <tr>
+            <th>Card Holder</th>
+            <td><input type="text" name="card_holder" placeholder="required" required></td>
+        </tr>
+    </table>
+
+    <h2>Order Details</h2>
+    <table id="orderDetails">
+        <tr>
+            <th>Order for</th>
+            <th>Loyalty order</th>
+            <th>Order For</th>
+            <th>Product</th>
+            <th>Amount</th>
+            <th>Paid</th>
+        </tr>
+        <tbody>
+        <tr>
+            <td><input type="date" name="order_date1" required></td>
+            <td><input type="checkbox" id="loyalty1" name="Loyalty" value="Yes"></td>
+            <td><input type="text" name="for?1" maxlength="" size="5"></td>
+            <td><input type="text" name="product1"></td>
+            <td><input type="number" class="amount" name="amount1" pattern="0.00" onchange="calculateTotals()"></td>
+            <td><input type="number" class="paid" name="paid1" maxlength="3" size="3" onchange="calculateTotals()"></td>
+        </tr>
+        <tr>
+            <td><input type="date" name="order_date2"></td>
+            <td><input type="checkbox" id="loyalty2" name="Loyalty"></td>
+            <td><input type="text" name="for?2" maxlength="5" size="5"></td>
+            <td><input type="text" name="product2"></td>
+            <td><input type="number" class="amount" name="amount2" onchange="calculateTotals()"></td>
+            <td><input type="number" class="paid" id="paid2" name="paid2" maxlength="3" size="3" onchange="calculateTotals()"></td>
+        </tr>
+        <tr>
+            <td><input type="date" name="order_date3"></td>
+            <td><input type="checkbox" id="loyalty3" name="loyalty3"></td>
+            <td><input type="text" name="for?3" maxlength="5" size="5"></td>
+            <td><input type="text" name="product3"></td>
+            <td><input type="number" class="amount" name="amount3" onchange="calculateTotals()"></td>
+            <td><input type="number" class="paid" name="paid3" maxlength="3" size="3" onchange="calculateTotals()"></td>
+        </tr>
+        <tr>
+            <td><input type="date" name="order_date4"></td>
+            <td><input type="checkbox" id="loyalty4" name="Yes"></td>
+            <td><input type="text" name="for?4" maxlength="5" size="5"></td>
+            <td><input type="text" name="product4"></td>
+            <td><input type="number" class="amount" name="amount4" onchange="calculateTotals()"></td>
+            <td><input type="number" class="paid" name="paid4" maxlength="3" size="3" onchange="calculateTotals()"></td>
+        </tr>
+        <tr>
+            <td><input type="date" name="order_date5"></td>
+            <td><input type="checkbox" id="loyalty5" name="Loyalty"></td>
+            <td><input type="text" name="for?5" maxlength="5" size="5"></td>
+            <td><input type="text" name="product5"></td>
+            <td><input type="number" class="amount" name="amount5" onchange="calculateTotals()"></td>
+            <td><input type="number" class="paid" name="paid5" maxlength="3" size="3" onchange="calculateTotals()"></td>
+        </tr>
+        <tr>
+            <td><input type="date" name="order_date6"></td>
+            <td><input type="checkbox" id="loyalty6" name="Loyalty"></td>
+            <td><input type="text" name="for?6" maxlength="5" size="5"></td>
+            <td><input type="text" name="product6"></td>
+            <td><input type="number" class="amount" name="amount6" onchange="calculateTotals()"></td>
+            <td><input type="number" class="paid" name="paid6" maxlength="3" size="3" onchange="calculateTotals()"></td>
+        </tr>
+       </tbody>
+        <tfoot>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>Total</td>
+        <td id="totalAmount">0</td>
+        <td id="totalpaid">0</td>
+        </tfoot>
+        </tr>
+           </table>
+
+    <h2>Additional Information</h2>
+    <textarea name="additional_info" rows="4" cols="50" placeholder="Enter any additional information here such as current Illness, Disease or Medication taken....."></textarea>
+
+          
+</form>
+
+<script>
+    function calculateTotals() {
+ 
+    const table = document.getElementById("orderDetails");
+    const totals = [0, 0];
+    const columns = table.querySelectorAll("tbody tr");
+    columns.forEach(column => {
+    const inputs = column.querySelectorAll("input[type='number']");
+    inputs.forEach((input, index) => {
+      totals[index] += parseFloat(input.value) || 0;
+       });
+    });
+
+    document.getElementById("totalAmount").textContent = totals[0];
+    document.getElementById("totalpaid").textContent = totals[1];
+
+    document.querySelectorAll("input.columnValue").forEach(input => {
+    input.addEventListener("input", calculateTotals())}
+    )};
+    
+    let generatedFilename = '';
+
+        function generateFilename() {
+            const part1 = document.getElementById('fname').value;
+            const part2 = document.getElementById('sname').value;
+            const date = new Date()
+            const shortDate = date.toLocaleDateString('en-ZA', { year: 'numeric', month: '2-digit', day: '2-digit' });
+            console.log(shortDate);
+            generatedFilename = `${part1}_${part2}_${shortDate}.csv`; // Create filename
+            document.getElementById('filenameDisplay').innerText = `Filename: ${generatedFilename}`; // Display filename
+            document.getElementById('downloadButton').style.display = 'inline'; // Show download button
+        }
+
+        function downloadFile() {
+            const form = document.getElementById('orderForm');
+            const formData = new FormData(form);
+            let content = '';
+
+      for (let [key, value] of formData.entries()) {
+        content += `${key}: ${value}\n`;
+      }
+            const blob = new Blob([content], { type: 'text/plain' }); // Create a Blob object
+            const url = URL.createObjectURL(blob); // Create a URL for the Blob
+
+            const a = document.createElement('a'); // Create an anchor element
+            a.href = url; // Set the href to the Blob URL
+            a.download = generatedFilename; // Set the download attribute with the filename
+            document.body.appendChild(a); // Append the anchor to the body
+            a.click(); // Programmatically click the anchor to trigger the download
+            document.body.removeChild(a); // Remove the anchor from the document
+            URL.revokeObjectURL(url); // Release the Blob URL
+        };
+    </script>
+</body>
+</html>
